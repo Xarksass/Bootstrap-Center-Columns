@@ -1,0 +1,58 @@
+h1{
+    margin: 30px 0 10px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+}
+
+p.lead{
+    margin: 0 0 40px;
+    text-align: center;
+    color: #999;
+}
+
+.demo{
+    margin: 20px 0 30px;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{
+    height: 300px;
+    background-color: #73B336;
+    display: table;
+    overflow: hidden;
+    p{
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        background-color: #292929;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    span.visible-xs {
+        display: inline !important;
+    }
+}
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    span.visible-sm {
+        display: inline !important;
+    }
+}
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    span.visible-md {
+        display: inline !important;
+    }
+}
+@media (min-width: @screen-lg-min) {
+    span.visible-lg {
+        display: inline !important;
+    }
+}
