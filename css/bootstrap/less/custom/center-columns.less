@@ -1,7 +1,7 @@
 /* --------------------------------------------------------
 Center Columns Framework
 
-version: 2.0
+version: 3.0
 demo page: http://codepen.io/disalvo_webdev/pen/XJOBdK/
 last modified: 09.04.2015 by Salvatore Di Salvo
 author: Salvatore Di Salvo
@@ -103,7 +103,7 @@ website: http://www.disalvo-infographiste.be
 \*---------------------*/
 
 // Global center for unique column on his row
-.center-column, .center-column > div{
+.center-column, .center-column > div, .center-column > fieldset {
     float: none;
     clear: both;
     margin-right: auto;
@@ -230,6 +230,52 @@ website: http://www.disalvo-infographiste.be
 }
 
 
+/*--------------------------*\
+----- CENTERING GALLERY -----
+\*--------------------------*/
+
+// Calculate offset needed to center the group of columns
+.calc-offset-center-gallery(@index, @class, @nb){
+    .center-gallery-@{class}-@{index} {
+        @maxPerRow: (@grid-columns - mod(@grid-columns,@index))/@index;
+        @offset: percentage( 0.5 - ( (@index * @nb) / ( @grid-columns * 2 ) ) );
+        > div:nth-child(@{maxPerRow}n+1):nth-last-child(@{nb}) {
+            margin-left: @offset;
+        }
+    }
+    .equid-gallery-@{class}-@{index} {
+        @maxPerRow: (@grid-columns - mod(@grid-columns,@index))/@index;
+        @offset: percentage(( 1 - ( @index * @nb / @grid-columns ) )/( 2*(@nb+1) ));
+        > div:nth-child(@{maxPerRow}n+1):nth-last-child(@{nb}) {
+            margin-left: @offset*2;
+            margin-right: @offset;
+            &~ div {
+                margin: 0 @offset;
+            }
+        }
+    }
+}
+
+// Second Basic looping in LESS
+.center-gallery(@index, @class, @nb) when (@nb > 0){
+    .calc-offset-center-gallery(@index, @class, @nb);
+    .center-gallery(@index, @class, (@nb - 1));
+}
+
+// Basic looping in LESS
+.loop-center-gallery(@index, @class) when (@index > 0) {
+    @maxOffset: ( ( @grid-columns - ( mod(@grid-columns,@index) ) ) / @index ) - 1;
+    .center-gallery(@index, @class, @maxOffset);
+    // next iteration
+    .loop-center-gallery((@index - 1), @class);
+}
+
+// Create centering rules for specific class
+.centered-gallery(@class) {
+    .loop-center-gallery((@grid-columns/2), @class);
+}
+
+
 /*----------------------------*\
 ----- INIT CENTERING RULES -----
 \*----------------------------*/
@@ -256,9 +302,12 @@ website: http://www.disalvo-infographiste.be
 // Centering and Equidistant Centering of Unique Columns and Group of columns
 // for extra small devices like smartphones.
 
-.global-center-class(xs);
-.centering-columns(xs);
-.equidistant-columns(xs);
+@media (max-width: @screen-xs-max) {
+    .global-center-class(xs);
+    .centering-columns(xs);
+    .equidistant-columns(xs);
+    .centered-gallery(xs);
+}
 
 
 // Small grid
@@ -266,10 +315,11 @@ website: http://www.disalvo-infographiste.be
 // Centering and Equidistant Centering of Unique Columns and Group of columns
 // for the small device range, from phones to tablets.
 
-@media (min-width: @screen-sm-min) {
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
     .global-center-class(sm);
     .centering-columns(sm);
     .equidistant-columns(sm);
+    .centered-gallery(sm);
 }
 
 
@@ -278,10 +328,11 @@ website: http://www.disalvo-infographiste.be
 // Centering and Equidistant Centering of Unique Columns and Group of columns
 // for the desktop device range.
 
-@media (min-width: @screen-md-min) {
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
     .global-center-class(md);
     .centering-columns(md);
     .equidistant-columns(md);
+    .centered-gallery(md);
 }
 
 
@@ -294,4 +345,5 @@ website: http://www.disalvo-infographiste.be
     .global-center-class(lg);
     .centering-columns(lg);
     .equidistant-columns(lg);
+    .centered-gallery(lg);
 }
