@@ -1,20 +1,20 @@
 # CenterColumns
 ## Features
-### center-column-*breakpoint*-*size*
+### .center-column-*breakpoint*-*size*
 Auto calculation of the offset needed to center a group of columns with of size of x columns.
 
-### center-gallery-*breakpoint*-*size*
+### .center-gallery-*breakpoint*-*size*
 Auto calculation of the offset needed to center the last elements of a gallery.
 Limited to the maximum possible size of a column for a gallery.
 
-### equid-column-*breakpoint*-*size* and equid-gallery-*breakpoint*-*size*
+### .equid-column-*breakpoint*-*size* and .equid-gallery-*breakpoint*-*size*
 Same operation as for versions *center* but the columns are centered equidistantly from each others.
 
 ## Demonstration page
-check the [demonstration on codepen](http://codepen.io/disalvo_webdev/pen/XJOBdK/)
+Check the [demonstration on codepen](http://codepen.io/disalvo_webdev/pen/XJOBdK/)
 
 ## Requirements
-[bootstrap](http://getbootstrap.com/)
+[Bootstrap](http://getbootstrap.com/)
 
 ## Basic Usage
 ### Columns of different sizes
