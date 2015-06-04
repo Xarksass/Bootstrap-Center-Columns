@@ -1,4 +1,11 @@
 # CenterColumns
+## Description
+It's a Bootstrap plugin to help you center columns and galleries.
+
+### Compatibility
+Only available with the Less version of bootstrap.
+The SASS version will come soon.
+
 ## Features
 ### .center-column-*breakpoint*-*size*
 Auto calculation of the offset needed to center a group of columns with of size of x columns.
