@@ -1,54 +1,56 @@
 // Core variables and mixins
-@import "variables.less";
-@import "mixins.less";
+@import (reference) "core/variables";
+@import "core/mixins";
 
 // Reset and dependencies
-@import "normalize.less";
-@import "print.less";
-@import "glyphicons.less";
+@import "core/normalize";
+@import "core/print";
+@import "core/glyphicons";
 
 // Core CSS
-@import "scaffolding.less";
-@import "type.less";
-@import "code.less";
-@import "grid.less";
-@import "custom/center-columns.less";
-@import "tables.less";
-@import "forms.less";
-@import "buttons.less";
+@import "core/scaffolding";
+@import "core/type";
+@import "core/code";
+@import "core/grid";
+@import "core/tables";
+@import "core/forms";
+@import "core/buttons";
 
 // Components
-@import "component-animations.less";
-@import "dropdowns.less";
-@import "button-groups.less";
-@import "input-groups.less";
-@import "navs.less";
-@import "navbar.less";
-@import "breadcrumbs.less";
-@import "pagination.less";
-@import "pager.less";
-@import "labels.less";
-@import "badges.less";
-@import "jumbotron.less";
-@import "thumbnails.less";
-@import "alerts.less";
-@import "progress-bars.less";
-@import "media.less";
-@import "list-group.less";
-@import "panels.less";
-@import "responsive-embed.less";
-@import "wells.less";
-@import "close.less";
+@import "core/component-animations";
+@import "core/dropdowns";
+@import "core/button-groups";
+@import "core/input-groups";
+@import "core/navs";
+@import "core/navbar";
+@import "core/breadcrumbs";
+@import "core/pagination";
+@import "core/pager";
+@import "core/labels";
+@import "core/badges";
+@import "core/jumbotron";
+@import "core/thumbnails";
+@import "core/alerts";
+@import "core/progress-bars";
+@import "core/media";
+@import "core/list-group";
+@import "core/panels";
+@import "core/responsive-embed";
+@import "core/wells";
+@import "core/close";
 
 // Components w/ JavaScript
-@import "modals.less";
-@import "tooltip.less";
-@import "popovers.less";
-@import "carousel.less";
+@import "core/modals";
+@import "core/tooltip";
+@import "core/popovers";
+@import "core/carousel";
 
 // Utility classes
-@import "utilities.less";
-@import "responsive-utilities.less";
+@import "core/utilities";
+@import "core/responsive-utilities";
 
-// Global
+// Plugins
+@import "plugins/bootstrap-center-columns/bootstrap-center-columns";
+
+// Custom
 @import "custom/main.less";

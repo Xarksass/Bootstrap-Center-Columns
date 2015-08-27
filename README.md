@@ -1,4 +1,4 @@
-# CenterColumns
+# Bootstrap Center Columns
 ## Description
 It's a Bootstrap plugin to help you center columns and galleries.
 
