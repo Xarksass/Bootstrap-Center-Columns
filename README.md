@@ -57,6 +57,7 @@ Check the [demonstration on codepen](http://codepen.io/disalvo_webdev/pen/XJOBdK
     </div>
 </div>
 ```
+### Center Gallery
 
 You can also use *center-gallery* for multiple columns of the same size.
 Example:
