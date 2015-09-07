@@ -5,8 +5,8 @@ It's a Bootstrap plugin to help you center columns and galleries.
 **New in 3.3.0** : you can now enable or disable the features you don't need so that lighten the final compiled code!
 
 ### Compatibility
-Only available with the Less version of bootstrap.
-The SASS version will come soon.
+Only available with the Less version of bootstrap and so only for **Bootstrap 3.x**.
+The SASS version for Bootstrap 4.x will come as soon as possible.
 
 ## Features
 ### .center-column-*breakpoint*-*size*
@@ -23,7 +23,7 @@ Same operation as for versions *center* but the columns are centered equidistant
 Check the [demonstration on codepen](http://codepen.io/disalvo_webdev/pen/XJOBdK/)
 
 ## Requirements
-[Bootstrap](http://getbootstrap.com/)
+[Bootstrap 3.x](http://getbootstrap.com/)
 
 ## Basic Usage
 ### Columns of different sizes
