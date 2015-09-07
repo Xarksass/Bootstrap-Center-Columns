@@ -2,7 +2,7 @@
 ## Description
 It's a Bootstrap plugin to help you center columns and galleries.
 
-#New in 3.3.0# : you can now enable or disable the features you don't need so that lighten the final compiled code!
+**New in 3.3.0** : you can now enable or disable the features you don't need so that lighten the final compiled code!
 
 ### Compatibility
 Only available with the Less version of bootstrap.
